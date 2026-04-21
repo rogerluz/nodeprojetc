@@ -10,6 +10,14 @@ const Painel = () => {
   )
 }
 
+const bloco = () => {
+  return (
+    <div className="bloco">
+      painel
+    </div>
+  )
+}
+
 const Botao = (props) => {
   return (
     <div className={props.tipo}>
