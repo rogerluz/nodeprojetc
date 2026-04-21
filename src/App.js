@@ -1,23 +1,41 @@
 import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+const Painel = () => {
+  return (
+    <div className="painel">
+      painel
+    </div>
+  )
+}
+
+const Botao = (props) => {
+  return (
+    <div className={props.tipo}>
+      {props.digito}
+    </div>
+  )
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="painel-botoes">
+      <Painel/>
+      <Botao tipo="botao-ac" digito="AC" />
+      <Botao tipo="botao-operacao" digito="/" />
+      <Botao tipo="botao-numero" digito="7" />
+      <Botao tipo="botao-numero" digito="8" />
+      <Botao tipo="botao-numero" digito="9" />
+      <Botao tipo="botao-operacao" digito="*" />
+      <Botao tipo="botao-numero" digito="4" />
+      <Botao tipo="botao-numero" digito="5" />
+      <Botao tipo="botao-numero" digito="6" />
+      <Botao tipo="botao-operacao" digito="-" />
+      <Botao tipo="botao-numero" digito="1" />
+      <Botao tipo="botao-numero" digito="2" />
+      <Botao tipo="botao-numero" digito="3" />
+      <Botao tipo="botao-operacao" digito="+" />
     </div>
   );
 }
